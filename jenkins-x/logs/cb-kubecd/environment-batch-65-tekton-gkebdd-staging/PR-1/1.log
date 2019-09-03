@@ -1,0 +1,90 @@
+
+Showing logs for build [32mmeta-cb-kubecd-environment-batc-1[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-c78gs[0m
+{"level":"warn","ts":1567508540.6937907,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567508540.6949592,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mmeta-cb-kubecd-environment-batc-1[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-88qfp[0m
+{"level":"warn","ts":1567508542.922609,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1567508542.924465,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mmeta-cb-kubecd-environment-batc-1[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mmeta-cb-kubecd-environment-batc-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-cb-kubecd-environment-batc-zz6rs[0m
+{"level":"warn","ts":1567508550.3584476,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567508550.9751308,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/cb-kubecd/environment-batch-65-tekton-gkebdd-staging.git @ 375dc367be3612150180d8f296dfbdd3f45e9404 in path /workspace/source"}
+
+Showing logs for build [32mmeta-cb-kubecd-environment-batc-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:375dc367be3612150180d8f296dfbdd3f45e9404,1:b00f20ba7c8fe049364d6a7a7b00554ed3a0afcb
+DEBUG: ran git fetch --unshallow origin b00f20ba7c8fe049364d6a7a7b00554ed3a0afcb: 375dc367be3612150180d8f296dfbdd3f45e9404: in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard 375dc367be3612150180d8f296dfbdd3f45e9404 in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge b00f20ba7c8fe049364d6a7a7b00554ed3a0afcb in 
+Merged SHA b00f20ba7c8fe049364d6a7a7b00554ed3a0afcb with commit message 'chore: Promote bdd-spring-1567508337 to version 0.0.1' into base branch master
+
+Showing logs for build [32mmeta-cb-kubecd-environment-batc-1[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+DEBUG: ran git fetch origin b00f20ba7c8fe049364d6a7a7b00554ed3a0afcb: 375dc367be3612150180d8f296dfbdd3f45e9404: in 
+DEBUG: Unshallowed git repo in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard 375dc367be3612150180d8f296dfbdd3f45e9404 in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge b00f20ba7c8fe049364d6a7a7b00554ed3a0afcb in 
+Merged SHA b00f20ba7c8fe049364d6a7a7b00554ed3a0afcb with commit message 'chore: Promote bdd-spring-1567508337 to version 0.0.1' into base branch master
+
+Showing logs for build [32mmeta-cb-kubecd-environment-batc-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+selected pack: /builder/home/.**/draft/packs/github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/packs/environment
+Effective pipeline written to jenkins-x-promotion-build-effective.yml
+
+Showing logs for build [32mmeta-cb-kubecd-environment-batc-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+PipelineActivity for cb-kubecd-environment-batch-65-tekton-gkebdd-staging-PR-1-1
+Applying changes 
+upserted PipelineResource cb-kubecd-environment-batch-65 for the git repository https://github.com/cb-kubecd/environment-batch-65-tekton-gkebdd-staging.git
+upserted Task cb-kubecd-environment-batch-65-from-build-pack-1
+upserted Pipeline cb-kubecd-environment-batch-65-1
+created PipelineRun cb-kubecd-environment-batch-65-1
+created PipelineStructure cb-kubecd-environment-batch-65-1
+
+Showing logs for build [32mmeta-cb-kubecd-environment-batc-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-kg9l2[0m
+{"level":"warn","ts":1567508563.225035,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567508563.2255266,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mmeta-cb-kubecd-environment-batc-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-ttrcb[0m
+{"level":"warn","ts":1567508563.7246,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1567508563.727477,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/env\""}
+
+Showing logs for build [32mmeta-cb-kubecd-environment-batc-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+waiting for stage [32mfrom-build-pack[0m : container [32mstep-git-source-cb-kubecd-environment-batch-65-8xfwv[0m to start...
+
+
+Showing logs for build [32mmeta-cb-kubecd-environment-batc-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-cb-kubecd-environment-batch-65-8xfwv[0m
+{"level":"warn","ts":1567508690.900679,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567508691.5370862,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/cb-kubecd/environment-batch-65-tekton-gkebdd-staging.git @ master in path /workspace/source"}
+
+waiting for stage [32mfrom-build-pack[0m : container [32mstep-git-merge[0m to start...
+
+
+Showing logs for build [32mmeta-cb-kubecd-environment-batc-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:375dc367be3612150180d8f296dfbdd3f45e9404,1:b00f20ba7c8fe049364d6a7a7b00554ed3a0afcb
+DEBUG: ran git fetch origin b00f20ba7c8fe049364d6a7a7b00554ed3a0afcb: 375dc367be3612150180d8f296dfbdd3f45e9404: in 
+DEBUG: Unshallowed git repo in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard 375dc367be3612150180d8f296dfbdd3f45e9404 in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge b00f20ba7c8fe049364d6a7a7b00554ed3a0afcb in 
+Merged SHA b00f20ba7c8fe049364d6a7a7b00554ed3a0afcb with commit message 'chore: Promote bdd-spring-1567508337 to version 0.0.1' into base branch master
+
+waiting for stage [32mfrom-build-pack[0m : container [32mstep-build-helm-build[0m to start...
+
+
+Showing logs for build [32mmeta-cb-kubecd-environment-batc-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
